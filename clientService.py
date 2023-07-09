@@ -18,7 +18,7 @@ app.config['DEBUG'] = True
 
 class ClientService:
     def __init__(self):
-        self.FolderPath = "InputFiles"
+        self.FolderPath = "F:\Data Science Full Stack Developer\NLP\BrandMeasureProject-20230709T065134Z-001\BrandMeasureProject\InputFiles"
         self.fileList = os.listdir(self.FolderPath)
         self.separatedOutputFiles = "./SeparatedOutputFiles"
         self.outputText = {}
@@ -97,7 +97,7 @@ def processInputFile():
 
 if __name__ == "__main__":
     clntApp = ClientService()
-    host = '0.0.0.0'
+    host = '127.0.0.1'
     port = 5000
     httpd = simple_server.make_server(host, port, app)
     print("Serving on %s %d" % (host, port))
